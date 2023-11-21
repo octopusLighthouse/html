@@ -6,7 +6,7 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: /
+    - location: /var/www/html
       timeout: 500
       runas: root
       command: |
