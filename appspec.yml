@@ -6,10 +6,7 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: /var/www/html
+    - location: .
       timeout: 500
       runas: root
-      command: |
-        ls -la /var/www/html/
-        rm -rf /var/www/html/index.html
-        ls -la /var/www/html/
+      command: "rm -rf /var/www/html/index.html"
