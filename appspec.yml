@@ -3,10 +3,13 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
-    
+
 hooks:
   BeforeInstall:
     - location: .
       timeout: 500
       runas: root
-      command: "rm -rf /var/www/html/index.html"
+      command: |
+        ls -la /var/www/html/
+        rm -rf /var/www/html/index.html
+        ls -la /var/www/html/
