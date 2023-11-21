@@ -3,3 +3,10 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+    
+hooks:
+  BeforeInstall:
+    - location: .
+      timeout: 500
+      runas: root
+      command: "rm -rf /var/www/html/*"
